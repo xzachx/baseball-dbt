@@ -4,6 +4,6 @@ with payments as (
         order_id,
         payment_method,
         amount / 100 as amount
-    from dbt_zbrown.payments
+    from {{ source('stripe', 'payments')}}
 )
 select * from payments
