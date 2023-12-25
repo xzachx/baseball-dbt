@@ -1,0 +1,52 @@
+version: 2
+
+sources:
+  - name: retrosheet
+    description: a clone of a Postgres application database
+    database: retrosheet
+    schema: dbt_zbrown
+    tables:
+      - name: bases_cd
+        description: Codes to identify which bases have a runner
+        columns:
+          - name: start_bases_cd
+            description: The primary key for the bases_cd data
+            tests:
+              - unique
+              - not_null
+        
+      - name: event_cd
+        description: Codes to identify in-game events
+        columns:
+          - name: value_cd
+            description: The primary key for the event_cd data
+            tests:
+              - unique
+              - not_null
+
+      - name: events
+        description: Play-by-play event data
+
+      - name: games
+        description: Game data
+
+      - name: parks
+        description: Park data
+        columns:
+          - name: park_id
+            description: The primary key for parks data
+            tests:
+              - unique
+              - not_null
+      
+      - name: players
+        description: Player data
+        columns:
+          - name: player_id
+            description: The primary key for player data
+            tests:
+              - unique
+              - not_null
+      
+      - name: subs
+        description: In-game substitution data
