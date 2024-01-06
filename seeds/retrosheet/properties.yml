@@ -1,0 +1,9 @@
+version: 2
+
+seeds:
+  - name: bases_cd
+    config:
+      schema: source
+  - name: event_cd
+    config:
+      schema: source

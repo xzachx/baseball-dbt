@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: jaffle_shop
     description: a clone of a Postgres application database
-    database: retrosheet
+    database: baseball
     schema: dbt_zbrown
     tables:
       - name: customers

@@ -1,0 +1,22 @@
+value_cd,shortname,longname
+2,Out,Generic Out
+3,K,Strikeout
+4,SB,Stolen Base
+5,DI,Defensive Indifferen
+6,CS,Caught Stealing
+8,PK,Pickoff
+9,WP,Wild Pitch
+10,PB,Passed Ball
+11,BK,Balk
+12,OA,Other Advance
+13,FE,Foul Error
+14,NIBB,Nonintentional Walk
+15,IBB,Intentional Walk
+16,HBP,Hit By Pitch
+17,XI,Interference
+18,ROE,Error
+19,FC,Fielder Choice
+20,1B,Single
+21,2B,Double
+22,3B,Triple
+23,HR,Homerun
