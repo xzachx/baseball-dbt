@@ -37,9 +37,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   baseball:
-    marts:
-      core:
-        +materialized: table
     staging:
       retrosheet:
         +materialized: view
