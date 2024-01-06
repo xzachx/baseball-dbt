@@ -1,9 +1,0 @@
-version: 2
-
-seeds:
-  - name: src_retrosheet__bases_cd
-    config:
-      schema: source
-  - name: src_retrosheet__event_cd
-    config:
-      schema: source
