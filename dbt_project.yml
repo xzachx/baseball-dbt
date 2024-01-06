@@ -36,9 +36,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  retrosheet:
-    marts:
-      core:
-        +materialized: table
-    staging:
+  marts:
+    core:
+      +materialized: table
+  staging:
+    retrosheet:
       +materialized: view
