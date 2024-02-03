@@ -39,481 +39,481 @@ sources:
         columns:
           - name: game_id
             data_type: character
-            description: ""
+            description: "Game ID"
           - name: away_team_id
             data_type: character
-            description: ""
+            description: "Visiting team"
           - name: inn_ct
             data_type: integer
-            description: ""
+            description: "Inning"
           - name: bat_home_id
             data_type: integer
-            description: ""
+            description: "Batting team"
           - name: outs_ct
             data_type: integer
-            description: ""
+            description: "Outs"
           - name: balls_ct
             data_type: integer
-            description: ""
+            description: "Balls"
           - name: strikes_ct
             data_type: integer
-            description: ""
+            description: "Strikes"
           - name: pitch_seq_tx
             data_type: character varying
-            description: ""
+            description: "Pitch sequence"
           - name: away_score_ct
             data_type: integer
-            description: ""
+            description: "Visitor score"
           - name: home_score_ct
             data_type: integer
-            description: ""
+            description: "Home score"
           - name: bat_id
             data_type: character
-            description: ""
+            description: "Batter"
           - name: bat_hand_cd
             data_type: character
-            description: ""
+            description: "Batter hand"
           - name: resp_bat_id
             data_type: character
-            description: ""
+            description: "Result batter"
           - name: resp_bat_hand_cd
             data_type: character
-            description: ""
+            description: "Result batter hand"
           - name: pit_id
             data_type: character
-            description: ""
+            description: "Pitcher"
           - name: pit_hand_cd
             data_type: character
-            description: ""
+            description: "Pitcher hand"
           - name: resp_pit_id
             data_type: character
-            description: ""
+            description: "Result pitcher"
           - name: resp_pit_hand_cd
             data_type: character
-            description: ""
+            description: "Result pitcher hand"
           - name: pos2_fld_id
             data_type: character
-            description: ""
+            description: "Catcher"
           - name: pos3_fld_id
             data_type: character
-            description: ""
+            description: "First baseman"
           - name: pos4_fld_id
             data_type: character
-            description: ""
+            description: "Second baseman"
           - name: pos5_fld_id
             data_type: character
-            description: ""
+            description: "Third baseman"
           - name: pos6_fld_id
             data_type: character
-            description: ""
+            description: "Shortstop"
           - name: pos7_fld_id
             data_type: character
-            description: ""
+            description: "Left fielder"
           - name: pos8_fld_id
             data_type: character
-            description: ""
+            description: "Center fielder"
           - name: pos9_fld_id
             data_type: character
-            description: ""
+            description: "Right fielder"
           - name: base1_run_id
             data_type: character varying
-            description: ""
+            description: "Runner on first"
           - name: base2_run_id
             data_type: character varying
-            description: ""
+            description: "Runner on second"
           - name: base3_run_id
             data_type: character varying
-            description: ""
+            description: "Runner on third"
           - name: event_tx
             data_type: character varying
-            description: ""
+            description: "Event text"
           - name: leadoff_fl
             data_type: boolean
-            description: ""
+            description: "Leadoff flag"
           - name: ph_fl
             data_type: boolean
-            description: ""
+            description: "Pinch-hit flag"
           - name: bat_fld_cd
             data_type: integer
-            description: ""
+            description: "Defensive position"
           - name: bat_lineup_id
             data_type: integer
-            description: ""
+            description: "Lineup position"
           - name: event_cd
             data_type: integer
-            description: ""
+            description: "Event type"
           - name: bat_event_fl
             data_type: boolean
-            description: ""
+            description: "Batter event flag"
           - name: ab_fl
             data_type: boolean
-            description: ""
+            description: "Official time at bat flag"
           - name: h_cd
             data_type: integer
-            description: ""
+            description: "Hit value"
           - name: sh_fl
             data_type: boolean
-            description: ""
+            description: "Sacrifice hit flag"
           - name: sf_fl
             data_type: boolean
-            description: ""
+            description: "Sacrifice fly flag"
           - name: event_outs_ct
             data_type: integer
-            description: ""
+            description: "Outs on play"
           - name: dp_fl
             data_type: boolean
-            description: ""
+            description: "Double play flag"
           - name: tp_fl
             data_type: boolean
-            description: ""
+            description: "Triple play flag"
           - name: rbi_ct
             data_type: integer
-            description: ""
+            description: "RBI on play"
           - name: wp_fl
             data_type: boolean
-            description: ""
+            description: "Wild pitch flag"
           - name: pb_fl
             data_type: boolean
-            description: ""
+            description: "Passed ball flag"
           - name: fld_cd
             data_type: integer
-            description: ""
+            description: "Fielded by"
           - name: battedball_cd
             data_type: character
-            description: ""
+            description: "Batted ball type"
           - name: bunt_fl
             data_type: boolean
-            description: ""
+            description: "Bunt flag"
           - name: foul_fl
             data_type: boolean
-            description: ""
+            description: "Foul flag"
           - name: battedball_loc_tx
             data_type: character varying
-            description: ""
+            description: "Hit location"
           - name: err_ct
             data_type: integer
-            description: ""
+            description: "Number of errors"
           - name: err1_fld_cd
             data_type: integer
-            description: ""
+            description: "1st error player"
           - name: err1_cd
             data_type: character
-            description: ""
+            description: "1st error type"
           - name: err2_fld_cd
             data_type: integer
-            description: ""
+            description: "2nd error player"
           - name: err2_cd
             data_type: character
-            description: ""
+            description: "2nd error type"
           - name: err3_fld_cd
             data_type: integer
-            description: ""
+            description: "3rd error player"
           - name: err3_cd
             data_type: character
-            description: ""
+            description: "3rd error type"
           - name: bat_dest_id
             data_type: integer
-            description: ""
+            description: "Batter destination"
           - name: run1_dest_id
             data_type: integer
-            description: ""
+            description: "Runner on first destination"
           - name: run2_dest_id
             data_type: integer
-            description: ""
+            description: "Runner on second destination"
           - name: run3_dest_id
             data_type: integer
-            description: ""
+            description: "Runner on third destination"
           - name: bat_play_tx
             data_type: character varying
-            description: ""
+            description: "Play on batter"
           - name: run1_play_tx
             data_type: character varying
-            description: ""
+            description: "Play on runner on first"
           - name: run2_play_tx
             data_type: character varying
-            description: ""
+            description: "Play on runner on second"
           - name: run3_play_tx
             data_type: character varying
-            description: ""
+            description: "Play on runner on third"
           - name: run1_sb_fl
             data_type: boolean
-            description: ""
+            description: "Stolen base for runner on first"
           - name: run2_sb_fl
             data_type: boolean
-            description: ""
+            description: "Stolen base for runner on second"
           - name: run3_sb_fl
             data_type: boolean
-            description: ""
+            description: "Stolen base for runner on third"
           - name: run1_cs_fl
             data_type: boolean
-            description: ""
+            description: "Caught stealing for runner on first"
           - name: run2_cs_fl
             data_type: boolean
-            description: ""
+            description: "Caught stealing for runner on second"
           - name: run3_cs_fl
             data_type: boolean
-            description: ""
+            description: "Caught stealing for runner on third"
           - name: run1_pk_fl
             data_type: boolean
-            description: ""
+            description: "Pickoff for runner on first"
           - name: run2_pk_fl
             data_type: boolean
-            description: ""
+            description: "Pickoff for runner on second"
           - name: run3_pk_fl
             data_type: boolean
-            description: ""
+            description: "Pickoff for runner on third"
           - name: run1_resp_pit_id
             data_type: character varying
-            description: ""
+            description: "Pitcher charged with runner on first"
           - name: run2_resp_pit_id
             data_type: character varying
-            description: ""
+            description: "Pitcher charged with runner on second"
           - name: run3_resp_pit_id
             data_type: character varying
-            description: ""
+            description: "Pitcher charged with runner on third"
           - name: game_new_fl
             data_type: boolean
-            description: ""
+            description: "New game flag"
           - name: game_end_fl
             data_type: boolean
-            description: ""
+            description: "End game flag"
           - name: pr_run1_fl
             data_type: boolean
-            description: ""
+            description: "Pinch-runner on first"
           - name: pr_run2_fl
             data_type: boolean
-            description: ""
+            description: "Pinch-runner on second"
           - name: pr_run3_fl
             data_type: boolean
-            description: ""
+            description: "Pinch-runner on third"
           - name: removed_for_pr_run1_id
             data_type: character varying
-            description: ""
+            description: "Runner removed for pinch-runner on first"
           - name: removed_for_pr_run2_id
             data_type: character varying
-            description: ""
+            description: "Runner removed for pinch-runner on second"
           - name: removed_for_pr_run3_id
             data_type: character varying
-            description: ""
+            description: "Runner removed for pinch-runner on third"
           - name: removed_for_ph_bat_id
             data_type: character varying
-            description: ""
+            description: "Batter removed for pinch-hitter"
           - name: removed_for_ph_bat_fld_cd
             data_type: integer
-            description: ""
+            description: "Position of batter removed for pinch-hitter"
           - name: po1_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with first putout"
           - name: po2_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with second putout"
           - name: po3_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with third putout"
           - name: ass1_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with first assist"
           - name: ass2_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with second assist"
           - name: ass3_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with third assist"
           - name: ass4_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with fourth assist"
           - name: ass5_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with fifth assist"
           - name: event_id
             data_type: integer
-            description: ""
+            description: "Event number"
           - name: home_team_id
             data_type: character
-            description: ""
+            description: "Home team ID"
           - name: bat_team_id
             data_type: character
-            description: ""
+            description: "Batting team ID"
           - name: fld_team_id
             data_type: character
-            description: ""
+            description: "Fielding team ID"
           - name: bat_last_id
             data_type: integer
-            description: ""
+            description: "Half inning (differs from batting team if home team bats first)"
           - name: inn_new_fl
             data_type: boolean
-            description: ""
+            description: "Start of half inning flag"
           - name: inn_end_fl
             data_type: boolean
-            description: ""
+            description: "End of half inning flag"
           - name: start_bat_score_ct
             data_type: integer
-            description: ""
+            description: "Score for team on offense"
           - name: start_fld_score_ct
             data_type: integer
-            description: ""
+            description: "Score for team on defense"
           - name: inn_runs_ct
             data_type: integer
-            description: ""
+            description: "Runs scored in this half inning"
           - name: game_pa_ct
             data_type: integer
-            description: ""
+            description: "Number of plate appearances in game for team on offense"
           - name: inn_pa_ct
             data_type: integer
-            description: ""
+            description: "Number of plate appearances in inning for team on offense"
           - name: pa_new_fl
             data_type: boolean
-            description: ""
+            description: "Start of plate appearance flag"
           - name: pa_trunc_fl
             data_type: boolean
-            description: ""
+            description: "Truncated plate appearance flag"
           - name: start_bases_cd
             data_type: integer
-            description: ""
+            description: "Base state at start of play"
           - name: end_bases_cd
             data_type: integer
-            description: ""
+            description: "Base state at end of play"
           - name: bat_start_fl
             data_type: boolean
-            description: ""
+            description: "Batter is starter flag"
           - name: resp_bat_start_fl
             data_type: boolean
-            description: ""
+            description: "Result batter is starter"
           - name: bat_on_deck_id
             data_type: character varying
-            description: ""
+            description: "ID of the batter on deck"
           - name: bat_in_hold_id
             data_type: character varying
-            description: ""
+            description: "ID of the batter in the hold"
           - name: pit_start_fl
             data_type: boolean
-            description: ""
+            description: "Pitcher is starter flag"
           - name: resp_pit_start_fl
             data_type: boolean
-            description: ""
+            description: "Result pitcher is starter flag"
           - name: run1_fld_cd
             data_type: integer
-            description: ""
+            description: "Defensive position of runner on first"
           - name: run1_lineup_cd
             data_type: integer
-            description: ""
+            description: "Lineup position of runner on first"
           - name: run1_origin_event_id
             data_type: integer
-            description: ""
+            description: "Event number on which runner on first reached base"
           - name: run2_fld_cd
             data_type: integer
-            description: ""
+            description: "Defensive position of runner on second"
           - name: run2_lineup_cd
             data_type: integer
-            description: ""
+            description: "Lineup position of runner on second"
           - name: run2_origin_event_id
             data_type: integer
-            description: ""
+            description: "Event number on which runner on second reached base"
           - name: run3_fld_cd
             data_type: integer
-            description: ""
+            description: "Defensive position of runner on third"
           - name: run3_lineup_cd
             data_type: integer
-            description: ""
+            description: "Lineup position of runner on third"
           - name: run3_origin_event_id
             data_type: integer
-            description: ""
+            description: "Event number on which runner on third reached base"
           - name: run1_resp_cat_id
             data_type: character varying
-            description: ""
+            description: "Responsible catcher for runner on first"
           - name: run2_resp_cat_id
             data_type: character varying
-            description: ""
+            description: "Responsible catcher for runner on second"
           - name: run3_resp_cat_id
             data_type: character varying
-            description: ""
+            description: "Responsible catcher for runner on third"
           - name: pa_ball_ct
             data_type: integer
-            description: ""
+            description: "Number of balls in plate appearance"
           - name: pa_called_ball_ct
             data_type: integer
-            description: ""
+            description: "Number of called balls in plate appearance"
           - name: pa_intent_ball_ct
             data_type: integer
-            description: ""
+            description: "Number of intentional balls in plate appearance"
           - name: pa_pitchout_ball_ct
             data_type: integer
-            description: ""
+            description: "Number of pitchouts in plate appearance"
           - name: pa_hitbatter_ball_ct
             data_type: integer
-            description: ""
+            description: "Number of pitches hitting batter in plate appearance"
           - name: pa_other_ball_ct
             data_type: integer
-            description: ""
+            description: "Number of other balls in plate appearance"
           - name: pa_strike_ct
             data_type: integer
-            description: ""
+            description: "Number of strikes in plate appearance"
           - name: pa_called_strike_ct
             data_type: integer
-            description: ""
+            description: "Number of called strikes in plate appearance"
           - name: pa_swingmiss_strike_ct
             data_type: integer
-            description: ""
+            description: "Number of swinging strikes in plate appearance"
           - name: pa_foul_strike_ct
             data_type: integer
-            description: ""
+            description: "Number of foul balls in play in plate appearance"
           - name: pa_inplay_strike_ct
             data_type: integer
-            description: ""
+            description: "Number of balls in play in plate appearance"
           - name: pa_other_strike_ct
             data_type: integer
-            description: ""
+            description: "Number of other strikes in plate appearance"
           - name: event_runs_ct
             data_type: integer
-            description: ""
+            description: "Number of runs on play"
           - name: fld_id
             data_type: character varying
-            description: ""
+            description: "ID of player fielding batted ball"
           - name: base2_force_fl
             data_type: boolean
-            description: ""
+            description: "Force play at second flag"
           - name: base3_force_fl
             data_type: boolean
-            description: ""
+            description: "Force play at third flag"
           - name: base4_force_fl
             data_type: boolean
-            description: ""
+            description: "Force play at home flag"
           - name: bat_safe_err_fl
             data_type: boolean
-            description: ""
+            description: "Batter safe on error flag"
           - name: bat_fate_id
             data_type: integer
-            description: ""
+            description: "Fate of batter (base ultimately advanced to)"
           - name: run1_fate_id
             data_type: integer
-            description: ""
+            description: "Fate of runner on first"
           - name: run2_fate_id
             data_type: integer
-            description: ""
+            description: "Fate of runner on second"
           - name: run3_fate_id
             data_type: integer
-            description: ""
+            description: "Fate of runner on third"
           - name: fate_runs_ct
             data_type: integer
-            description: ""
+            description: "Runs scored in half inning after this event"
           - name: ass6_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with sixth assist"
           - name: ass7_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with seventh assist"
           - name: ass8_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with eighth assist"
           - name: ass9_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with ninth assist"
           - name: ass10_fld_cd
             data_type: integer
-            description: ""
+            description: "Fielder with tenth assist"
           - name: loaded_at
             data_type: timestamp with time zone
-            description: ""
+            description: "Timestamp when row was ingested"
 
       - name: src_retrosheet__games
         description: ""
