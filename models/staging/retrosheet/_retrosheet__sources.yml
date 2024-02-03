@@ -1,0 +1,1237 @@
+version: 2
+
+sources:
+  - name: retrosheet
+    description: ""
+    schema: source
+    tables:
+      - name: src_retrosheet__bases_cd
+        description: ""
+        columns:
+          - name: start_bases_cd
+            data_type: integer
+            description: ""
+          - name: runner_1
+            data_type: integer
+            description: ""
+          - name: runner_2
+            data_type: integer
+            description: ""
+          - name: runner_3
+            data_type: integer
+            description: ""
+
+      - name: src_retrosheet__event_cd
+        description: ""
+        columns:
+          - name: value_cd
+            data_type: integer
+            description: ""
+          - name: shortname
+            data_type: character varying
+            description: ""
+          - name: longname
+            data_type: character varying
+            description: ""
+
+      - name: src_retrosheet__events
+        description: ""
+        columns:
+          - name: game_id
+            data_type: character
+            description: ""
+          - name: away_team_id
+            data_type: character
+            description: ""
+          - name: inn_ct
+            data_type: integer
+            description: ""
+          - name: bat_home_id
+            data_type: integer
+            description: ""
+          - name: outs_ct
+            data_type: integer
+            description: ""
+          - name: balls_ct
+            data_type: integer
+            description: ""
+          - name: strikes_ct
+            data_type: integer
+            description: ""
+          - name: pitch_seq_tx
+            data_type: character varying
+            description: ""
+          - name: away_score_ct
+            data_type: integer
+            description: ""
+          - name: home_score_ct
+            data_type: integer
+            description: ""
+          - name: bat_id
+            data_type: character
+            description: ""
+          - name: bat_hand_cd
+            data_type: character
+            description: ""
+          - name: resp_bat_id
+            data_type: character
+            description: ""
+          - name: resp_bat_hand_cd
+            data_type: character
+            description: ""
+          - name: pit_id
+            data_type: character
+            description: ""
+          - name: pit_hand_cd
+            data_type: character
+            description: ""
+          - name: resp_pit_id
+            data_type: character
+            description: ""
+          - name: resp_pit_hand_cd
+            data_type: character
+            description: ""
+          - name: pos2_fld_id
+            data_type: character
+            description: ""
+          - name: pos3_fld_id
+            data_type: character
+            description: ""
+          - name: pos4_fld_id
+            data_type: character
+            description: ""
+          - name: pos5_fld_id
+            data_type: character
+            description: ""
+          - name: pos6_fld_id
+            data_type: character
+            description: ""
+          - name: pos7_fld_id
+            data_type: character
+            description: ""
+          - name: pos8_fld_id
+            data_type: character
+            description: ""
+          - name: pos9_fld_id
+            data_type: character
+            description: ""
+          - name: base1_run_id
+            data_type: character varying
+            description: ""
+          - name: base2_run_id
+            data_type: character varying
+            description: ""
+          - name: base3_run_id
+            data_type: character varying
+            description: ""
+          - name: event_tx
+            data_type: character varying
+            description: ""
+          - name: leadoff_fl
+            data_type: boolean
+            description: ""
+          - name: ph_fl
+            data_type: boolean
+            description: ""
+          - name: bat_fld_cd
+            data_type: integer
+            description: ""
+          - name: bat_lineup_id
+            data_type: integer
+            description: ""
+          - name: event_cd
+            data_type: integer
+            description: ""
+          - name: bat_event_fl
+            data_type: boolean
+            description: ""
+          - name: ab_fl
+            data_type: boolean
+            description: ""
+          - name: h_cd
+            data_type: integer
+            description: ""
+          - name: sh_fl
+            data_type: boolean
+            description: ""
+          - name: sf_fl
+            data_type: boolean
+            description: ""
+          - name: event_outs_ct
+            data_type: integer
+            description: ""
+          - name: dp_fl
+            data_type: boolean
+            description: ""
+          - name: tp_fl
+            data_type: boolean
+            description: ""
+          - name: rbi_ct
+            data_type: integer
+            description: ""
+          - name: wp_fl
+            data_type: boolean
+            description: ""
+          - name: pb_fl
+            data_type: boolean
+            description: ""
+          - name: fld_cd
+            data_type: integer
+            description: ""
+          - name: battedball_cd
+            data_type: character
+            description: ""
+          - name: bunt_fl
+            data_type: boolean
+            description: ""
+          - name: foul_fl
+            data_type: boolean
+            description: ""
+          - name: battedball_loc_tx
+            data_type: character varying
+            description: ""
+          - name: err_ct
+            data_type: integer
+            description: ""
+          - name: err1_fld_cd
+            data_type: integer
+            description: ""
+          - name: err1_cd
+            data_type: character
+            description: ""
+          - name: err2_fld_cd
+            data_type: integer
+            description: ""
+          - name: err2_cd
+            data_type: character
+            description: ""
+          - name: err3_fld_cd
+            data_type: integer
+            description: ""
+          - name: err3_cd
+            data_type: character
+            description: ""
+          - name: bat_dest_id
+            data_type: integer
+            description: ""
+          - name: run1_dest_id
+            data_type: integer
+            description: ""
+          - name: run2_dest_id
+            data_type: integer
+            description: ""
+          - name: run3_dest_id
+            data_type: integer
+            description: ""
+          - name: bat_play_tx
+            data_type: character varying
+            description: ""
+          - name: run1_play_tx
+            data_type: character varying
+            description: ""
+          - name: run2_play_tx
+            data_type: character varying
+            description: ""
+          - name: run3_play_tx
+            data_type: character varying
+            description: ""
+          - name: run1_sb_fl
+            data_type: boolean
+            description: ""
+          - name: run2_sb_fl
+            data_type: boolean
+            description: ""
+          - name: run3_sb_fl
+            data_type: boolean
+            description: ""
+          - name: run1_cs_fl
+            data_type: boolean
+            description: ""
+          - name: run2_cs_fl
+            data_type: boolean
+            description: ""
+          - name: run3_cs_fl
+            data_type: boolean
+            description: ""
+          - name: run1_pk_fl
+            data_type: boolean
+            description: ""
+          - name: run2_pk_fl
+            data_type: boolean
+            description: ""
+          - name: run3_pk_fl
+            data_type: boolean
+            description: ""
+          - name: run1_resp_pit_id
+            data_type: character varying
+            description: ""
+          - name: run2_resp_pit_id
+            data_type: character varying
+            description: ""
+          - name: run3_resp_pit_id
+            data_type: character varying
+            description: ""
+          - name: game_new_fl
+            data_type: boolean
+            description: ""
+          - name: game_end_fl
+            data_type: boolean
+            description: ""
+          - name: pr_run1_fl
+            data_type: boolean
+            description: ""
+          - name: pr_run2_fl
+            data_type: boolean
+            description: ""
+          - name: pr_run3_fl
+            data_type: boolean
+            description: ""
+          - name: removed_for_pr_run1_id
+            data_type: character varying
+            description: ""
+          - name: removed_for_pr_run2_id
+            data_type: character varying
+            description: ""
+          - name: removed_for_pr_run3_id
+            data_type: character varying
+            description: ""
+          - name: removed_for_ph_bat_id
+            data_type: character varying
+            description: ""
+          - name: removed_for_ph_bat_fld_cd
+            data_type: integer
+            description: ""
+          - name: po1_fld_cd
+            data_type: integer
+            description: ""
+          - name: po2_fld_cd
+            data_type: integer
+            description: ""
+          - name: po3_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass1_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass2_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass3_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass4_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass5_fld_cd
+            data_type: integer
+            description: ""
+          - name: event_id
+            data_type: integer
+            description: ""
+          - name: home_team_id
+            data_type: character
+            description: ""
+          - name: bat_team_id
+            data_type: character
+            description: ""
+          - name: fld_team_id
+            data_type: character
+            description: ""
+          - name: bat_last_id
+            data_type: integer
+            description: ""
+          - name: inn_new_fl
+            data_type: boolean
+            description: ""
+          - name: inn_end_fl
+            data_type: boolean
+            description: ""
+          - name: start_bat_score_ct
+            data_type: integer
+            description: ""
+          - name: start_fld_score_ct
+            data_type: integer
+            description: ""
+          - name: inn_runs_ct
+            data_type: integer
+            description: ""
+          - name: game_pa_ct
+            data_type: integer
+            description: ""
+          - name: inn_pa_ct
+            data_type: integer
+            description: ""
+          - name: pa_new_fl
+            data_type: boolean
+            description: ""
+          - name: pa_trunc_fl
+            data_type: boolean
+            description: ""
+          - name: start_bases_cd
+            data_type: integer
+            description: ""
+          - name: end_bases_cd
+            data_type: integer
+            description: ""
+          - name: bat_start_fl
+            data_type: boolean
+            description: ""
+          - name: resp_bat_start_fl
+            data_type: boolean
+            description: ""
+          - name: bat_on_deck_id
+            data_type: character varying
+            description: ""
+          - name: bat_in_hold_id
+            data_type: character varying
+            description: ""
+          - name: pit_start_fl
+            data_type: boolean
+            description: ""
+          - name: resp_pit_start_fl
+            data_type: boolean
+            description: ""
+          - name: run1_fld_cd
+            data_type: integer
+            description: ""
+          - name: run1_lineup_cd
+            data_type: integer
+            description: ""
+          - name: run1_origin_event_id
+            data_type: integer
+            description: ""
+          - name: run2_fld_cd
+            data_type: integer
+            description: ""
+          - name: run2_lineup_cd
+            data_type: integer
+            description: ""
+          - name: run2_origin_event_id
+            data_type: integer
+            description: ""
+          - name: run3_fld_cd
+            data_type: integer
+            description: ""
+          - name: run3_lineup_cd
+            data_type: integer
+            description: ""
+          - name: run3_origin_event_id
+            data_type: integer
+            description: ""
+          - name: run1_resp_cat_id
+            data_type: character varying
+            description: ""
+          - name: run2_resp_cat_id
+            data_type: character varying
+            description: ""
+          - name: run3_resp_cat_id
+            data_type: character varying
+            description: ""
+          - name: pa_ball_ct
+            data_type: integer
+            description: ""
+          - name: pa_called_ball_ct
+            data_type: integer
+            description: ""
+          - name: pa_intent_ball_ct
+            data_type: integer
+            description: ""
+          - name: pa_pitchout_ball_ct
+            data_type: integer
+            description: ""
+          - name: pa_hitbatter_ball_ct
+            data_type: integer
+            description: ""
+          - name: pa_other_ball_ct
+            data_type: integer
+            description: ""
+          - name: pa_strike_ct
+            data_type: integer
+            description: ""
+          - name: pa_called_strike_ct
+            data_type: integer
+            description: ""
+          - name: pa_swingmiss_strike_ct
+            data_type: integer
+            description: ""
+          - name: pa_foul_strike_ct
+            data_type: integer
+            description: ""
+          - name: pa_inplay_strike_ct
+            data_type: integer
+            description: ""
+          - name: pa_other_strike_ct
+            data_type: integer
+            description: ""
+          - name: event_runs_ct
+            data_type: integer
+            description: ""
+          - name: fld_id
+            data_type: character varying
+            description: ""
+          - name: base2_force_fl
+            data_type: boolean
+            description: ""
+          - name: base3_force_fl
+            data_type: boolean
+            description: ""
+          - name: base4_force_fl
+            data_type: boolean
+            description: ""
+          - name: bat_safe_err_fl
+            data_type: boolean
+            description: ""
+          - name: bat_fate_id
+            data_type: integer
+            description: ""
+          - name: run1_fate_id
+            data_type: integer
+            description: ""
+          - name: run2_fate_id
+            data_type: integer
+            description: ""
+          - name: run3_fate_id
+            data_type: integer
+            description: ""
+          - name: fate_runs_ct
+            data_type: integer
+            description: ""
+          - name: ass6_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass7_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass8_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass9_fld_cd
+            data_type: integer
+            description: ""
+          - name: ass10_fld_cd
+            data_type: integer
+            description: ""
+          - name: loaded_at
+            data_type: timestamp with time zone
+            description: ""
+
+      - name: src_retrosheet__games
+        description: ""
+        columns:
+          - name: game_id
+            data_type: character varying
+            description: ""
+          - name: game_dt
+            data_type: integer
+            description: ""
+          - name: game_ct
+            data_type: integer
+            description: ""
+          - name: game_dy
+            data_type: character varying
+            description: ""
+          - name: start_game_tm
+            data_type: integer
+            description: ""
+          - name: dh_fl
+            data_type: character varying
+            description: ""
+          - name: daynight_park_cd
+            data_type: character varying
+            description: ""
+          - name: away_team_id
+            data_type: character varying
+            description: ""
+          - name: home_team_id
+            data_type: character varying
+            description: ""
+          - name: park_id
+            data_type: character varying
+            description: ""
+          - name: away_start_pit_id
+            data_type: character varying
+            description: ""
+          - name: home_start_pit_id
+            data_type: character varying
+            description: ""
+          - name: base4_ump_id
+            data_type: character varying
+            description: ""
+          - name: base1_ump_id
+            data_type: character varying
+            description: ""
+          - name: base2_ump_id
+            data_type: character varying
+            description: ""
+          - name: base3_ump_id
+            data_type: character varying
+            description: ""
+          - name: lf_ump_id
+            data_type: character varying
+            description: ""
+          - name: rf_ump_id
+            data_type: character varying
+            description: ""
+          - name: attend_park_ct
+            data_type: integer
+            description: ""
+          - name: scorer_record_id
+            data_type: character varying
+            description: ""
+          - name: translator_record_id
+            data_type: character varying
+            description: ""
+          - name: inputter_record_id
+            data_type: character varying
+            description: ""
+          - name: input_record_ts
+            data_type: character varying
+            description: ""
+          - name: edit_record_ts
+            data_type: character varying
+            description: ""
+          - name: method_record_cd
+            data_type: character varying
+            description: ""
+          - name: pitches_record_cd
+            data_type: character varying
+            description: ""
+          - name: temp_park_ct
+            data_type: integer
+            description: ""
+          - name: wind_direction_park_cd
+            data_type: integer
+            description: ""
+          - name: wind_speed_park_ct
+            data_type: integer
+            description: ""
+          - name: field_park_cd
+            data_type: integer
+            description: ""
+          - name: precip_park_cd
+            data_type: integer
+            description: ""
+          - name: sky_park_cd
+            data_type: integer
+            description: ""
+          - name: minutes_game_ct
+            data_type: integer
+            description: ""
+          - name: inn_ct
+            data_type: integer
+            description: ""
+          - name: away_score_ct
+            data_type: integer
+            description: ""
+          - name: home_score_ct
+            data_type: integer
+            description: ""
+          - name: away_hits_ct
+            data_type: integer
+            description: ""
+          - name: home_hits_ct
+            data_type: integer
+            description: ""
+          - name: away_err_ct
+            data_type: integer
+            description: ""
+          - name: home_err_ct
+            data_type: integer
+            description: ""
+          - name: away_lob_ct
+            data_type: integer
+            description: ""
+          - name: home_lob_ct
+            data_type: integer
+            description: ""
+          - name: win_pit_id
+            data_type: character varying
+            description: ""
+          - name: lose_pit_id
+            data_type: character varying
+            description: ""
+          - name: save_pit_id
+            data_type: character varying
+            description: ""
+          - name: gwrbi_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup1_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup1_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup2_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup2_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup3_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup3_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup4_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup4_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup5_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup5_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup6_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup6_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup7_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup7_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup8_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup8_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_lineup9_bat_id
+            data_type: character varying
+            description: ""
+          - name: away_lineup9_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup1_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup1_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup2_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup2_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup3_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup3_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup4_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup4_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup5_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup5_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup6_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup6_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup7_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup7_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup8_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup8_fld_cd
+            data_type: integer
+            description: ""
+          - name: home_lineup9_bat_id
+            data_type: character varying
+            description: ""
+          - name: home_lineup9_fld_cd
+            data_type: integer
+            description: ""
+          - name: away_finish_pit_id
+            data_type: character varying
+            description: ""
+          - name: home_finish_pit_id
+            data_type: character varying
+            description: ""
+          - name: away_team_league_id
+            data_type: character
+            description: ""
+          - name: home_team_league_id
+            data_type: character
+            description: ""
+          - name: away_team_game_ct
+            data_type: integer
+            description: ""
+          - name: home_team_game_ct
+            data_type: integer
+            description: ""
+          - name: outs_ct
+            data_type: integer
+            description: ""
+          - name: completion_tx
+            data_type: text
+            description: ""
+          - name: forfeit_tx
+            data_type: text
+            description: ""
+          - name: protest_tx
+            data_type: text
+            description: ""
+          - name: away_line_tx
+            data_type: text
+            description: ""
+          - name: home_line_tx
+            data_type: text
+            description: ""
+          - name: away_ab_ct
+            data_type: integer
+            description: ""
+          - name: away_2b_ct
+            data_type: integer
+            description: ""
+          - name: away_3b_ct
+            data_type: integer
+            description: ""
+          - name: away_hr_ct
+            data_type: integer
+            description: ""
+          - name: away_bi_ct
+            data_type: integer
+            description: ""
+          - name: away_sh_ct
+            data_type: integer
+            description: ""
+          - name: away_sf_ct
+            data_type: integer
+            description: ""
+          - name: away_hp_ct
+            data_type: integer
+            description: ""
+          - name: away_bb_ct
+            data_type: integer
+            description: ""
+          - name: away_ibb_ct
+            data_type: integer
+            description: ""
+          - name: away_so_ct
+            data_type: integer
+            description: ""
+          - name: away_sb_ct
+            data_type: integer
+            description: ""
+          - name: away_cs_ct
+            data_type: integer
+            description: ""
+          - name: away_gdp_ct
+            data_type: integer
+            description: ""
+          - name: away_xi_ct
+            data_type: integer
+            description: ""
+          - name: away_pitcher_ct
+            data_type: integer
+            description: ""
+          - name: away_er_ct
+            data_type: integer
+            description: ""
+          - name: away_ter_ct
+            data_type: integer
+            description: ""
+          - name: away_wp_ct
+            data_type: integer
+            description: ""
+          - name: away_bk_ct
+            data_type: integer
+            description: ""
+          - name: away_po_ct
+            data_type: integer
+            description: ""
+          - name: away_a_ct
+            data_type: integer
+            description: ""
+          - name: away_pb_ct
+            data_type: integer
+            description: ""
+          - name: away_dp_ct
+            data_type: integer
+            description: ""
+          - name: away_tp_ct
+            data_type: integer
+            description: ""
+          - name: home_ab_ct
+            data_type: integer
+            description: ""
+          - name: home_2b_ct
+            data_type: integer
+            description: ""
+          - name: home_3b_ct
+            data_type: integer
+            description: ""
+          - name: home_hr_ct
+            data_type: integer
+            description: ""
+          - name: home_bi_ct
+            data_type: integer
+            description: ""
+          - name: home_sh_ct
+            data_type: integer
+            description: ""
+          - name: home_sf_ct
+            data_type: integer
+            description: ""
+          - name: home_hp_ct
+            data_type: integer
+            description: ""
+          - name: home_bb_ct
+            data_type: integer
+            description: ""
+          - name: home_ibb_ct
+            data_type: integer
+            description: ""
+          - name: home_so_ct
+            data_type: integer
+            description: ""
+          - name: home_sb_ct
+            data_type: integer
+            description: ""
+          - name: home_cs_ct
+            data_type: integer
+            description: ""
+          - name: home_gdp_ct
+            data_type: integer
+            description: ""
+          - name: home_xi_ct
+            data_type: integer
+            description: ""
+          - name: home_pitcher_ct
+            data_type: integer
+            description: ""
+          - name: home_er_ct
+            data_type: integer
+            description: ""
+          - name: home_ter_ct
+            data_type: integer
+            description: ""
+          - name: home_wp_ct
+            data_type: integer
+            description: ""
+          - name: home_bk_ct
+            data_type: integer
+            description: ""
+          - name: home_po_ct
+            data_type: integer
+            description: ""
+          - name: home_a_ct
+            data_type: integer
+            description: ""
+          - name: home_pb_ct
+            data_type: integer
+            description: ""
+          - name: home_dp_ct
+            data_type: integer
+            description: ""
+          - name: home_tp_ct
+            data_type: integer
+            description: ""
+          - name: ump_home_name_tx
+            data_type: text
+            description: ""
+          - name: ump_1b_name_tx
+            data_type: text
+            description: ""
+          - name: ump_2b_name_tx
+            data_type: text
+            description: ""
+          - name: ump_3b_name_tx
+            data_type: text
+            description: ""
+          - name: ump_lf_name_tx
+            data_type: text
+            description: ""
+          - name: ump_rf_name_tx
+            data_type: text
+            description: ""
+          - name: away_manager_id
+            data_type: character varying
+            description: ""
+          - name: away_manager_name_tx
+            data_type: text
+            description: ""
+          - name: home_manager_id
+            data_type: character varying
+            description: ""
+          - name: home_manager_name_tx
+            data_type: text
+            description: ""
+          - name: win_pit_name_tx
+            data_type: text
+            description: ""
+          - name: lose_pit_name_tx
+            data_type: text
+            description: ""
+          - name: save_pit_name_tx
+            data_type: text
+            description: ""
+          - name: goahead_rbi_id
+            data_type: character varying
+            description: ""
+          - name: goahead_rbi_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup1_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup2_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup3_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup4_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup5_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup6_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup7_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup8_bat_name_tx
+            data_type: text
+            description: ""
+          - name: away_lineup9_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup1_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup2_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup3_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup4_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup5_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup6_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup7_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup8_bat_name_tx
+            data_type: text
+            description: ""
+          - name: home_lineup9_bat_name_tx
+            data_type: text
+            description: ""
+          - name: add_info_tx
+            data_type: text
+            description: ""
+          - name: acq_info_tx
+            data_type: text
+            description: ""
+          - name: loaded_at
+            data_type: timestamp with time zone
+            description: ""
+
+      - name: src_retrosheet__parks
+        description: ""
+        columns:
+          - name: park_id
+            data_type: character
+            description: ""
+          - name: name
+            data_type: text
+            description: ""
+          - name: aka
+            data_type: text
+            description: ""
+          - name: city
+            data_type: text
+            description: ""
+          - name: state
+            data_type: text
+            description: ""
+          - name: start_date
+            data_type: date
+            description: ""
+          - name: end_date
+            data_type: date
+            description: ""
+          - name: league
+            data_type: text
+            description: ""
+          - name: notes
+            data_type: text
+            description: ""
+          - name: loaded_at
+            data_type: timestamp with time zone
+            description: ""
+
+      - name: src_retrosheet__players
+        description: ""
+        columns:
+          - name: player_id
+            data_type: character
+            description: ""
+          - name: last_name
+            data_type: text
+            description: ""
+          - name: first_name
+            data_type: text
+            description: ""
+          - name: nickname
+            data_type: text
+            description: ""
+          - name: birthdate
+            data_type: date
+            description: ""
+          - name: birth_city
+            data_type: text
+            description: ""
+          - name: birth_state
+            data_type: text
+            description: ""
+          - name: birth_country
+            data_type: text
+            description: ""
+          - name: play_debut
+            data_type: date
+            description: ""
+          - name: play_lastgame
+            data_type: date
+            description: ""
+          - name: mgr_debut
+            data_type: date
+            description: ""
+          - name: mgr_lastgame
+            data_type: date
+            description: ""
+          - name: coach_debut
+            data_type: date
+            description: ""
+          - name: coach_lastgame
+            data_type: date
+            description: ""
+          - name: ump_debut
+            data_type: date
+            description: ""
+          - name: ump_lastgame
+            data_type: date
+            description: ""
+          - name: deathdate
+            data_type: date
+            description: ""
+          - name: death_city
+            data_type: text
+            description: ""
+          - name: death_state
+            data_type: text
+            description: ""
+          - name: death_country
+            data_type: text
+            description: ""
+          - name: bats
+            data_type: character
+            description: ""
+          - name: throws
+            data_type: character
+            description: ""
+          - name: height
+            data_type: text
+            description: ""
+          - name: weight
+            data_type: numeric
+            description: ""
+          - name: cemetery
+            data_type: text
+            description: ""
+          - name: ceme_city
+            data_type: text
+            description: ""
+          - name: ceme_state
+            data_type: text
+            description: ""
+          - name: ceme_country
+            data_type: text
+            description: ""
+          - name: ceme_note
+            data_type: text
+            description: ""
+          - name: birth_name
+            data_type: text
+            description: ""
+          - name: name_chg
+            data_type: text
+            description: ""
+          - name: bat_chg
+            data_type: text
+            description: ""
+          - name: hof
+            data_type: boolean
+            description: ""
+          - name: loaded_at
+            data_type: timestamp with time zone
+            description: ""
+
+      - name: src_retrosheet__subs
+        description: ""
+        columns:
+          - name: game_id
+            data_type: character varying
+            description: ""
+          - name: inn_ct
+            data_type: integer
+            description: ""
+          - name: bat_home_id
+            data_type: integer
+            description: ""
+          - name: sub_id
+            data_type: character varying
+            description: ""
+          - name: sub_home_id
+            data_type: integer
+            description: ""
+          - name: sub_lineup_id
+            data_type: integer
+            description: ""
+          - name: sub_fld_cd
+            data_type: integer
+            description: ""
+          - name: removed_id
+            data_type: character varying
+            description: ""
+          - name: removed_fld_cd
+            data_type: integer
+            description: ""
+          - name: event_id
+            data_type: integer
+            description: ""
+          - name: loaded_at
+            data_type: timestamp with time zone
+            description: ""
