@@ -14,7 +14,7 @@ sources:
             tests:
               - unique
               - not_null
-        
+
       - name: src_retrosheet__event_cd
         description: Codes to identify in-game events
         columns:
@@ -38,7 +38,7 @@ sources:
             tests:
               - unique
               - not_null
-      
+
       - name: src_retrosheet__players
         description: Player data
         columns:
@@ -47,6 +47,6 @@ sources:
             tests:
               - unique
               - not_null
-      
+
       - name: src_retrosheet__subs
         description: In-game substitution data
