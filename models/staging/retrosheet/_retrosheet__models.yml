@@ -643,3 +643,6 @@ models:
       - name: game_event_hash_id
         data_type: text
         description: ""
+        tests:
+            - unique
+            - not_null
