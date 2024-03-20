@@ -2,647 +2,1218 @@ version: 2
 
 models:
   - name: stg_retrosheet__events
-    description: ""
+    description: The dbt model stg_retrosheet__events is a comprehensive database
+      that captures detailed information about baseball games. It includes data on
+      teams, players, scores, and specific events during the game, such as hits, runs,
+      errors, and more. This model can be used to analyze performance trends, identify
+      key factors influencing game outcomes, and make strategic decisions. For example,
+      it can help determine a player's batting average, a team's winning streak, or
+      the impact of a specific play on the game's result. The model's extensive data
+      points allow for a wide range of analyses, making it a valuable tool for anyone
+      involved in baseball, from team managers to sports analysts.
     columns:
       - name: game_id
         data_type: character
-        description: ""
+        description: The unique ID of the game.
 
       - name: away_team_id
         data_type: character
-        description: ""
+        description: The 3-letter code representing the away team in the game.
 
       - name: inning
         data_type: integer
-        description: ""
+        description: The inning in which the event occurred.
 
       - name: is_home_team_batter
         data_type: integer
-        description: ""
+        description: Indicates whether the batter plays for the home team.
 
       - name: outs
         data_type: integer
-        description: ""
+        description: The number of outs at the time of the event.
 
       - name: balls
         data_type: integer
-        description: ""
+        description: The number of balls in the current plate appearance.
 
       - name: strikes
         data_type: integer
-        description: ""
+        description: The number of strikes at the time of the event.
 
       - name: pitch_sequence
         data_type: character varying
-        description: ""
+        description: The sequence of pitches in the plate appearance.
 
       - name: away_team_score
         data_type: integer
-        description: ""
+        description: The number of runs scored by the away team at the time of the
+          event.
 
       - name: home_team_score
         data_type: integer
-        description: ""
+        description: The number of runs scored by the home team at the time of the
+          event.
 
       - name: batter_id
         data_type: character
-        description: ""
+        description: The unique ID of the batter in the play.
 
       - name: batter_hand
         data_type: character
-        description: ""
+        description: The handedness of the batter, either 'L' for left-handed or 'R'
+          for right-handed.
 
       - name: responsible_batter_id
         data_type: character
-        description: ""
+        description: The unique ID of the responsible batter.
 
       - name: responsible_batter_hand
         data_type: character
-        description: ""
+        description: The handedness of the responsible batter, either 'L' for left-handed
+          or 'R' for right-handed.
 
       - name: pitcher_id
         data_type: character
-        description: ""
+        description: The unique ID of the pitcher.
 
       - name: pitcher_hand
         data_type: character
-        description: ""
+        description: The handedness of the pitcher, either 'L' for left-handed or
+          'R' for right-handed.
 
       - name: responsible_pitcher_id
         data_type: character
-        description: ""
+        description: The unique ID of the responsible pitcher.
 
       - name: responsible_pitcher_hand
         data_type: character
-        description: ""
+        description: The handedness of the responsible pitcher, either 'L' for left-handed
+          or 'R' for right-handed.
 
       - name: catcher_id
         data_type: character
-        description: ""
+        description: The unique ID of the catcher.
 
       - name: first_baseman_id
         data_type: character
-        description: ""
+        description: The unique ID of the first baseman.
 
       - name: second_baseman_id
         data_type: character
-        description: ""
+        description: The unique ID of the second baseman.
 
       - name: third_baseman_id
         data_type: character
-        description: ""
+        description: The unique ID of the third baseman.
 
       - name: shortstop_id
         data_type: character
-        description: ""
+        description: The unique ID of the shortstop.
 
       - name: left_fielder_id
         data_type: character
-        description: ""
+        description: The unique ID of the left fielder.
 
       - name: center_fielder_id
         data_type: character
-        description: ""
+        description: The unique ID of the center fielder.
 
       - name: right_fielder_id
         data_type: character
-        description: ""
+        description: The unique ID of the right fielder.
 
       - name: runner_on_first_id
         data_type: character varying
-        description: ""
+        description: The unique ID of the runner on first base.
 
       - name: runner_on_second_id
         data_type: character varying
-        description: ""
+        description: The unique ID of the runner on second base.
 
       - name: runner_on_third_id
         data_type: character varying
-        description: ""
+        description: The unique ID of the runner on third base.
 
       - name: event_text
         data_type: character varying
-        description: ""
+        description: A text description of the event.
 
       - name: is_leadoff_hitter
         data_type: boolean
-        description: ""
+        description: Indicates whether the batter was the leadoff hitter in the lineup.
 
       - name: is_pinch_hitter
         data_type: boolean
-        description: ""
+        description: Indicates whether the batter was a pinch hitter.
 
       - name: batter_defensive_position
         data_type: integer
-        description: ""
+        description: The fielding position of the batter, such as '1' for pitcher
+          or '9' for right fielder.
 
       - name: lineup_position
         data_type: integer
-        description: ""
+        description: The position of the batter in the batting lineup.
 
       - name: event_code
         data_type: integer
-        description: ""
+        description: A numeric code representing the type of event, such as '14' for
+          single or '23' for strikeout.
 
       - name: is_batter_event
         data_type: boolean
-        description: ""
+        description: Indicates whether the event directly involves the batter.
 
       - name: is_at_bat
         data_type: boolean
-        description: ""
+        description: Indicates whether the event represents an official at bat.
 
       - name: hit_value
         data_type: integer
-        description: ""
+        description: A code indicating the type of hit, such as '1' for single or
+          '3' for triple.
 
       - name: is_sacrifice_hit
         data_type: boolean
-        description: ""
+        description: Indicates whether the event was a sacrifice hit.
 
       - name: is_sacrifice_fly
         data_type: boolean
-        description: ""
+        description: Indicates whether the event was a sacrifice fly.
 
       - name: outs_on_play
         data_type: integer
-        description: ""
+        description: The number of outs recorded during the event.
 
       - name: is_double_play
         data_type: boolean
-        description: ""
+        description: Indicates whether the event resulted in a double play.
 
       - name: is_triple_play
         data_type: boolean
-        description: ""
+        description: Indicates whether the event resulted in a triple play.
 
       - name: runs_batted_in
         data_type: integer
-        description: ""
+        description: The number of runs batted in during the event.
 
       - name: is_wild_pitch
         data_type: boolean
-        description: ""
+        description: Indicates whether the event was a wild pitch.
 
       - name: is_passed_ball
         data_type: boolean
-        description: ""
+        description: Indicates whether the event was a passed ball.
 
       - name: fielded_by
         data_type: integer
-        description: ""
+        description: The fielder who fielded the ball, indicated by a number 1 through
+          9 for each position.
 
       - name: batted_ball_type
         data_type: character
-        description: ""
+        description: The type of ball put in play, such as 'B' for bunt or 'F' for
+          fly ball.
 
       - name: is_gunt
         data_type: boolean
-        description: ""
+        description: Indicates whether the ball was bunted.
 
       - name: is_foul
         data_type: boolean
-        description: ""
+        description: Indicates whether the ball was hit foul.
 
       - name: batted_ball_location
         data_type: character varying
-        description: ""
+        description: The location where the ball was hit, such as 'left', 'center',
+          or 'right'.
 
       - name: number_of_errors
         data_type: integer
-        description: ""
+        description: The number of errors committed during the event.
 
       - name: first_error_player_id
         data_type: integer
-        description: ""
+        description: The ID of the fielder who committed the first error, if any.
 
       - name: first_error_type
         data_type: character
-        description: ""
+        description: The type of first error committed, such as 'E' for error or 'T'
+          for throwing error.
 
       - name: second_error_player_id
         data_type: integer
-        description: ""
+        description: The ID of the fielder who committed the second error, if any.
 
       - name: second_error_type
         data_type: character
-        description: ""
+        description: The type of second error committed, such as 'E' for error or
+          'T' for throwing error.
 
       - name: third_error_player_id
         data_type: integer
-        description: ""
+        description: The ID of the fielder who committed the third error, if any.
 
       - name: third_error_type
         data_type: character
-        description: ""
+        description: The type of third error committed, such as 'E' for error or 'T'
+          for throwing error.
 
       - name: batter_destination
         data_type: integer
-        description: ""
+        description: The base the batter ended up on after the play, such as '1' for
+          first base or '4' for home plate.
 
       - name: runner_on_first_destination
         data_type: integer
-        description: ""
+        description: The base the runner on first base ended up on.
 
       - name: runner_on_second_destination
         data_type: integer
-        description: ""
+        description: The base the runner on second base ended up on.
 
       - name: runner_on_third_destination
         data_type: integer
-        description: ""
+        description: The base the runner on third base ended up on.
 
       - name: play_on_batter
         data_type: character varying
-        description: ""
+        description: The text description of the play involving the batter.
 
       - name: play_on_runner_on_first
         data_type: character varying
-        description: ""
+        description: The text description of the play involving the runner on first
+          base.
 
       - name: play_on_runner_on_second
         data_type: character varying
-        description: ""
+        description: The text description of the play involving the runner on second
+          base.
 
       - name: play_on_runner_on_third
         data_type: character varying
-        description: ""
+        description: The text description of the play involving the runner on third
+          base.
 
       - name: is_stolen_base_for_runner_on_first
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on first base stole a base.
 
       - name: is_stolen_base_for_runner_on_second
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on second base stole a base.
 
       - name: is_stolen_base_for_runner_on_third
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on third base stole a base.
 
       - name: is_caught_stealing_for_runner_on_first
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on first base was caught stealing.
 
       - name: is_caught_stealing_for_runner_on_second
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on second base was caught stealing.
 
       - name: is_caught_stealing_for_runner_on_third
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on third base was caught stealing.
 
       - name: is_pickoff_for_runner_on_first
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on first base was picked off.
 
       - name: is_pickoff_for_runner_on_second
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on second base was picked off.
 
       - name: is_pickoff_for_runner_on_third
         data_type: boolean
-        description: ""
+        description: Indicates whether the runner on third base was picked off.
 
       - name: runner_on_first_responsible_pitcher_id
         data_type: character varying
-        description: ""
+        description: The ID of the pitcher responsible for the runner on first base.
 
       - name: runner_on_second_responsible_pitcher_id
         data_type: character varying
-        description: ""
+        description: The ID of the pitcher responsible for the runner on second base.
 
       - name: runner_on_third_responsible_pitcher_id
         data_type: character varying
-        description: ""
+        description: The ID of the pitcher responsible for the runner on third base.
 
       - name: is_new_game
         data_type: boolean
-        description: ""
+        description: Indicates whether the event is the first in a new game.
 
       - name: is_end_of_game
         data_type: boolean
-        description: ""
+        description: Indicates whether the event ended the game.
 
       - name: first_base_pinch_runner_id
         data_type: boolean
-        description: ""
+        description: Indicates whether there was a pinch runner for the first base
+          runner.
 
       - name: second_base_pinch_runner_id
         data_type: boolean
-        description: ""
+        description: Indicates whether there was a pinch runner for the second base
+          runner.
 
       - name: third_base_pinch_runner_id
         data_type: boolean
-        description: ""
+        description: Indicates whether there was a pinch runner for the third base
+          runner.
 
       - name: removed_for_first_base_pinch_runner_id
         data_type: character varying
-        description: ""
+        description: The ID of the player removed for a pinch runner on first base.
 
       - name: removed_for_second_base_pinch_runner_id
         data_type: character varying
-        description: ""
+        description: The ID of the player removed for a pinch runner on second base.
 
       - name: removed_for_third_base_pinch_runner_id
         data_type: character varying
-        description: ""
+        description: The ID of the player removed for a pinch runner on third base.
 
       - name: removed_for_pinch_hitter_id
         data_type: character varying
-        description: ""
+        description: The ID of the player removed for a pinch hitter.
 
       - name: removed_for_pinch_hitter_position
         data_type: integer
-        description: ""
+        description: The position of the player removed for a pinch hitter.
 
       - name: fielder_with_first_putout
         data_type: integer
-        description: ""
+        description: The fielder who recorded the first putout, if any.
 
       - name: fielder_with_second_putout
         data_type: integer
-        description: ""
+        description: The fielder who recorded the second putout, if any.
 
       - name: fielder_with_third_putout
         data_type: integer
-        description: ""
+        description: The fielder who recorded the third putout, if any.
 
       - name: fielder_with_first_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the first assist, if any.
 
       - name: fielder_with_second_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the second assist, if any.
 
       - name: fielder_with_third_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the third assist, if any.
 
       - name: fielder_with_fourth_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the fourth assist, if any.
 
       - name: fielder_with_fifth_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the fifth assist, if any.
 
       - name: event_id
         data_type: integer
-        description: ""
+        description: The unique ID of the event.
 
       - name: home_team_id
         data_type: character
-        description: ""
+        description: The 3-letter code representing the home team.
 
       - name: batting_team_id
         data_type: character
-        description: ""
+        description: The 3-letter code representing the batting team.
 
       - name: fielding_team_id
         data_type: character
-        description: ""
+        description: The 3-letter code representing the fielding team.
 
       - name: is_team_that_bats_last
         data_type: integer
-        description: ""
+        description: Indicates whether the batting team bats last.
 
       - name: is_start_of_half_inning
         data_type: boolean
-        description: ""
+        description: Indicates whether the event began a new half inning.
 
       - name: is_end_of_half_inning
         data_type: boolean
-        description: ""
+        description: Indicates whether the event ended the half inning.
 
       - name: score_for_batting_team
         data_type: integer
-        description: ""
+        description: The score for the batting team at the start of the event.
 
       - name: score_for_fielding_team
         data_type: integer
-        description: ""
+        description: The score for the fielding team at the start of the event.
 
       - name: runs_scored_in_half_inning
         data_type: integer
-        description: ""
+        description: The number of runs scored so far in the half inning.
 
       - name: batting_team_plate_appearances_in_game
         data_type: integer
-        description: ""
+        description: The total number of plate appearances for the batting team so
+          far in the game.
 
       - name: batting_team_plate_appearances_in_inning
         data_type: integer
-        description: ""
+        description: The total number of plate appearances for the batting team so
+          far in the current inning.
 
       - name: start_of_plate_appearance
         data_type: boolean
-        description: ""
+        description: Indicates whether the event began a new plate appearance.
 
       - name: truncated_plate_appearance
         data_type: boolean
-        description: ""
+        description: Indicates whether the plate appearance was truncated.
 
       - name: start_of_play_base_state
         data_type: integer
-        description: ""
+        description: The base state at the start of the play, indicating which bases
+          were occupied.
 
       - name: end_of_play_base_state
         data_type: integer
-        description: ""
+        description: The base state at the end of the play, indicating which bases
+          are occupied.
 
       - name: is_batter_starter
         data_type: boolean
-        description: ""
+        description: Indicates whether the batter was in the starting lineup.
 
       - name: is_responsible_batter_starter
         data_type: boolean
-        description: ""
+        description: Indicates whether the responsible batter was in the starting
+          lineup.
 
       - name: on_deck_batter_id
         data_type: character varying
-        description: ""
+        description: The unique ID of the batter in the on-deck circle.
 
       - name: in_the_hole_batter_id
         data_type: character varying
-        description: ""
+        description: The unique ID of the batter on deck.
 
       - name: is_pitcher_starter
         data_type: boolean
-        description: ""
+        description: Indicates whether the pitcher was in the starting lineup.
 
       - name: is_responsible_pitcher_starter
         data_type: boolean
-        description: ""
+        description: Indicates whether the responsible pitcher was in the starting
+          lineup.
 
       - name: runner_on_first_defensive_position
         data_type: integer
-        description: ""
+        description: The fielding position of the runner on first base.
 
       - name: runner_on_first_lineup_position
         data_type: integer
-        description: ""
+        description: The position of the runner on first base in the batting lineup.
 
       - name: runner_on_first_origin_event_id
         data_type: integer
-        description: ""
+        description: The ID of the event that put the runner on first base.
 
       - name: runner_on_second_defensive_position
         data_type: integer
-        description: ""
+        description: The fielding position of the runner on second base.
 
       - name: runner_on_second_lineup_position
         data_type: integer
-        description: ""
+        description: The position of the runner on second base in the batting lineup.
 
       - name: runner_on_second_origin_event_id
         data_type: integer
-        description: ""
+        description: The ID of the event that put the runner on second base.
 
       - name: runner_on_third_defensive_position
         data_type: integer
-        description: ""
+        description: The fielding position of the runner on third base.
 
       - name: runner_on_third_lineup_position
         data_type: integer
-        description: ""
+        description: The position of the runner on third base in the batting lineup.
 
       - name: runner_on_third_origin_event_id
         data_type: integer
-        description: ""
+        description: The ID of the event that put the runner on third base.
 
       - name: runner_on_first_repsonsible_catcher_id
         data_type: character varying
-        description: ""
+        description: The ID of the catcher responsible for the runner on first base.
 
       - name: runner_on_second_responsible_cathcer_id
         data_type: character varying
-        description: ""
+        description: The ID of the catcher responsible for the runner on second base.
 
       - name: runner_on_third_responsible_catcher_id
         data_type: character varying
-        description: ""
+        description: The ID of the catcher responsible for the runner on third base.
 
       - name: balls_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of balls in the current plate appearance.
 
       - name: called_balls_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of balls called by the umpire in the current plate
+          appearance.
 
       - name: intentional_balls_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of intentional balls in the current plate appearance.
 
       - name: pitchouts_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of pitchouts in the current plate appearance.
 
       - name: pitches_hitting_batter_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of pitches that hit the batter in the current plate
+          appearance.
 
       - name: other_balls_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of other balls in the current plate appearance.
 
       - name: strikes_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of strikes in the current plate appearance.
 
       - name: called_strikes_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of strikes called by the umpire in the current plate
+          appearance.
 
       - name: swinging_strikes_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of swinging strikes in the current plate appearance.
 
       - name: foul_balls_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of foul balls in the current plate appearance.
 
       - name: balls_in_play_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of balls put in play during the current plate appearance.
 
       - name: other_strikes_in_plate_appearance
         data_type: integer
-        description: ""
+        description: The number of other strikes in the current plate appearance.
 
       - name: runs_on_play
         data_type: integer
-        description: ""
+        description: The number of runs scored during the event.
 
       - name: fielder_playing_batted_ball_id
         data_type: character varying
-        description: ""
+        description: The unique ID of the fielder who fielded the batted ball.
 
       - name: is_force_play_at_second
         data_type: boolean
-        description: ""
+        description: Indicates whether the play at second base was a force out.
 
       - name: is_force_play_at_third
         data_type: boolean
-        description: ""
+        description: Indicates whether the play at third base was a force out.
 
       - name: is_force_play_at_home
         data_type: boolean
-        description: ""
+        description: Indicates whether the play at home plate was a force out.
 
       - name: is_batter_safe_on_error
         data_type: boolean
-        description: ""
+        description: Indicates whether the batter reached base safely due to an error.
 
       - name: fate_of_batter
         data_type: integer
-        description: ""
+        description: The outcome for the batter, such as '1' for safe on base or '7'
+          for out.
 
       - name: fate_of_runner_on_first
         data_type: integer
-        description: ""
+        description: The outcome for the runner on first base, such as '1' for safe
+          on base or '7' for out.
 
       - name: fate_of_runner_on_second
         data_type: integer
-        description: ""
+        description: The outcome for the runner on second base, such as '1' for safe
+          on base or '7' for out.
 
       - name: fate_of_runner_on_third
         data_type: integer
-        description: ""
+        description: The outcome for the runner on third base, such as '1' for safe
+          on base or '7' for out.
 
       - name: runs_scored_in_half_inning_after_event
         data_type: integer
-        description: ""
+        description: The number of runs scored in the half inning after the event.
 
       - name: fielder_with_sixth_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the sixth assist, if any.
 
       - name: fielder_with_seventh_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the seventh assist, if any.
 
       - name: fielder_with_eighth_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the eighth assist, if any.
 
       - name: fielder_with_ninth_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the ninth assist, if any.
 
       - name: fielder_with_tenth_assist
         data_type: integer
-        description: ""
+        description: The fielder who recorded the tenth assist, if any.
 
       - name: loaded_at
         data_type: timestamp with time zone
-        description: ""
+        description: The timestamp when the data was loaded into the database.
 
       - name: game_event_hash_id
         data_type: text
-        description: ""
+        description: A hash of the game ID and event ID, used to uniquely identify
+          each event.
         tests:
-            - unique
-            - not_null
+          - unique
+          - not_null
+  - name: stg_retrosheet__games
+    description: The dbt model stg_retrosheet__games is a comprehensive database of
+      baseball games. It includes detailed information about each game, such as the
+      teams playing, the players in the lineup, the number of hits, runs, errors,
+      and much more. This data can be used to analyze team performance, player statistics,
+      and game outcomes. It can help in making strategic decisions like player selection
+      and game tactics. The model reveals patterns like the correlation between certain
+      player actions and game outcomes. It's a valuable tool for anyone involved in
+      baseball management or analysis.
+    columns:
+      - name: game_id
+        description: The Retrosheet game ID, in the format yyyymmddHHMM, where HHMM
+          is the start time of the game in 24-hour format.
+      - name: game_dt
+        description: The date of the game in YYYYMMDD format.
+      - name: game_ct
+        description: The game number of the season for the home team.
+      - name: game_dy
+        description: The day of the week the game was played.
+      - name: dh_fl
+        description: Indicates if the designated hitter rule was in effect for the
+          game. Y=Yes, N=No.
+      - name: daynight_park_cd
+        description: Indicates if the game was played during the day (D), night (N),
+          or started as one and ended as the other (X).
+      - name: away_team_id
+        description: The 3-letter Retrosheet code for the away team.
+      - name: away_start_pit_id
+        description: The Retrosheet ID of the away team's starting pitcher. The starting
+          pitcher is the first pitcher used in the game.
+      - name: base4_ump_id
+        description: The Retrosheet ID of the home plate umpire.
+      - name: base1_ump_id
+        description: The Retrosheet ID of the first base umpire.
+      - name: base2_ump_id
+        description: The Retrosheet ID of the second base umpire.
+      - name: base3_ump_id
+        description: The Retrosheet ID of the third base umpire.
+      - name: attend_park_ct
+        description: The number of people who attended the game at the ballpark.
+      - name: edit_record_ts
+        description: The timestamp of the last edit made to the game data.
+      - name: field_park_cd
+        description: The code for the field/park where the game was played.
+      - name: away_score_ct
+        description: The number of runs scored by the away team.
+      - name: home_score_ct
+        description: The number of runs scored by the home team.
+      - name: away_hits_ct
+        description: The number of hits allowed by the away team's pitchers.
+      - name: home_hits_ct
+        description: The number of hits allowed by the home team's pitchers.
+      - name: away_err_ct
+        description: The number of errors committed by the away team's defense.
+      - name: home_err_ct
+        description: The number of errors committed by the home team's defense.
+      - name: away_lob_ct
+        description: The number of runners left on base by the away team at the end
+          of each inning.
+      - name: home_lob_ct
+        description: The number of runners left on base by the home team at the end
+          of each inning.
+      - name: gwrbi_bat_id
+        description: The Retrosheet ID of the batter who drove in the game-winning
+          RBI. The game-winning RBI is the run that provides the winning margin in
+          the final score.
+      - name: away_lineup1_bat_id
+        description: The Retrosheet ID of the first batter in the away team's lineup.
+      - name: away_lineup1_fld_cd
+        description: The fielding position of the first batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup2_bat_id
+        description: The Retrosheet ID of the second batter in the away team's lineup.
+      - name: away_lineup2_fld_cd
+        description: The fielding position of the second batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup3_bat_id
+        description: The Retrosheet ID of the third batter in the away team's lineup.
+      - name: away_lineup3_fld_cd
+        description: The fielding position of the third batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup4_bat_id
+        description: The Retrosheet ID of the fourth batter in the away team's lineup.
+      - name: away_lineup4_fld_cd
+        description: The fielding position of the fourth batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup5_bat_id
+        description: The Retrosheet ID of the fifth batter in the away team's lineup.
+      - name: away_lineup5_fld_cd
+        description: The fielding position of the fifth batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup6_bat_id
+        description: The Retrosheet ID of the sixth batter in the away team's lineup.
+      - name: away_lineup6_fld_cd
+        description: The fielding position of the sixth batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup7_bat_id
+        description: The Retrosheet ID of the seventh batter in the away team's lineup.
+      - name: away_lineup7_fld_cd
+        description: The fielding position of the seventh batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup8_bat_id
+        description: The Retrosheet ID of the eighth batter in the away team's lineup.
+      - name: away_lineup8_fld_cd
+        description: The fielding position of the eighth batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_lineup9_bat_id
+        description: The Retrosheet ID of the ninth batter in the away team's lineup.
+      - name: away_lineup9_fld_cd
+        description: The fielding position of the ninth batter in the away team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup1_bat_id
+        description: The Retrosheet ID of the first batter in the home team's lineup.
+      - name: home_lineup1_fld_cd
+        description: The fielding position of the first batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup2_bat_id
+        description: The Retrosheet ID of the second batter in the home team's lineup.
+      - name: home_lineup2_fld_cd
+        description: The fielding position of the second batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup3_bat_id
+        description: The Retrosheet ID of the third batter in the home team's lineup.
+      - name: home_lineup3_fld_cd
+        description: The fielding position of the third batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup4_bat_id
+        description: The Retrosheet ID of the fourth batter in the home team's lineup.
+      - name: home_lineup4_fld_cd
+        description: The fielding position of the fourth batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup5_bat_id
+        description: The Retrosheet ID of the fifth batter in the home team's lineup.
+      - name: home_lineup5_fld_cd
+        description: The fielding position of the fifth batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup6_bat_id
+        description: The Retrosheet ID of the sixth batter in the home team's lineup.
+      - name: home_lineup6_fld_cd
+        description: The fielding position of the sixth batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup7_bat_id
+        description: The Retrosheet ID of the seventh batter in the home team's lineup.
+      - name: home_lineup7_fld_cd
+        description: The fielding position of the seventh batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup8_bat_id
+        description: The Retrosheet ID of the eighth batter in the home team's lineup.
+      - name: home_lineup8_fld_cd
+        description: The fielding position of the eighth batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: home_lineup9_bat_id
+        description: The Retrosheet ID of the ninth batter in the home team's lineup.
+      - name: home_lineup9_fld_cd
+        description: The fielding position of the ninth batter in the home team's
+          lineup. The positions are coded, e.g. 1=Pitcher, 2=Catcher, etc.
+      - name: away_finish_pit_id
+        description: The Retrosheet ID of the away team's finishing pitcher. The finishing
+          pitcher is the last pitcher used in the game.
+      - name: home_finish_pit_id
+        description: The Retrosheet ID of the home team's finishing pitcher. The finishing
+          pitcher is the last pitcher used in the game.
+      - name: away_team_league_id
+        description: The 1-letter code for the league of the away team. A=American
+          League, N=National League.
+      - name: away_team_game_ct
+        description: The total number of games played by the away team in the season.
+      - name: completion_tx
+        description: Indicates if the game was completed, suspended, forfeited, etc.
+      - name: forfeit_tx
+        description: Indicates if the game was forfeited. Y=Yes, N=No.
+      - name: away_line_tx
+        description: The batting lineup used by the away team, listing each player's
+          name and position.
+      - name: home_line_tx
+        description: The batting lineup used by the home team, listing each player's
+          name and position.
+      - name: away_ab_ct
+        description: The number of official at bats by the away team. An official
+          at bat is when a batter completes a turn batting and is put out or becomes
+          a runner.
+      - name: away_2b_ct
+        description: The number of doubles hit by the away team.
+      - name: away_3b_ct
+        description: The number of triples hit by the away team.
+      - name: away_hr_ct
+        description: The number of home runs hit by the away team.
+      - name: away_bi_ct
+        description: The number of batters hit by a pitch for the away team.
+      - name: away_sh_ct
+        description: The number of sacrifice hits (bunts) by the away team. A sacrifice
+          hit is when a batter bunts the ball in a way that allows a runner to advance,
+          even though the batter is put out at first base.
+      - name: away_sf_ct
+        description: The number of sacrifice flies hit by the away team. A sacrifice
+          fly is when a batter hits a fly ball that is caught for an out, but allows
+          a runner to score from third base.
+      - name: away_hp_ct
+        description: The number of hit batters by the away team's pitchers.
+      - name: away_bb_ct
+        description: The number of walks (bases on balls) allowed to the away team.
+      - name: away_ibb_ct
+        description: The number of intentional walks issued to the away team. An intentional
+          walk is when the defensive team intentionally allows the batter to advance
+          to first base.
+      - name: away_so_ct
+        description: The number of strikeouts recorded by the away team's pitchers.
+      - name: away_sb_ct
+        description: The number of stolen bases against the away team. A stolen base
+          is when a runner advances one or more bases when the pitcher is in the set
+          position and the ball is live.
+      - name: away_cs_ct
+        description: The number of caught stealings against the away team. A caught
+          stealing is when a runner attempts to steal a base but is thrown out.
+      - name: away_gdp_ct
+        description: The number of ground-ball double plays turned by the away team's
+          defense.
+      - name: away_xi_ct
+        description: The number of extra-base hits (doubles, triples and home runs)
+          by the away team.
+      - name: away_pitcher_ct
+        description: The number of pitchers used by the away team.
+      - name: away_er_ct
+        description: The number of earned runs allowed by the away team's pitchers.
+          Earned runs are runs that scored as a result of the pitcher's performance,
+          rather than errors or passed balls.
+      - name: away_ter_ct
+        description: The number of runners thrown out on the bases by the away team's
+          defense.
+      - name: away_wp_ct
+        description: The number of wild pitches allowed by the away team's pitchers.
+          A wild pitch is when a pitch is too high, wide, or low to be caught by the
+          catcher, allowing runners to advance.
+      - name: away_bk_ct
+        description: The number of balks committed by the away team's pitchers. A
+          balk is an illegal motion made by the pitcher with runners on base.
+      - name: away_po_ct
+        description: The number of putouts recorded by the away team's defense. A
+          putout is when a fielder causes an out by a tag or force out, catching a
+          batted or thrown ball, or catching a third strike.
+      - name: away_a_ct
+        description: The number of times the away team was at bat.
+      - name: away_pb_ct
+        description: The number of passed balls allowed by the away team's catchers.
+          A passed ball is when the catcher fails to hold or control a pitch that
+          should have been caught, allowing runners to advance.
+      - name: away_dp_ct
+        description: The number of double plays turned by the away team's defense.
+      - name: away_tp_ct
+        description: The number of triple plays turned by the away team's defense.
+          A triple play is when three outs are made on the same play.
+      - name: home_ab_ct
+        description: The number of official at bats by the home team. An official
+          at bat is when a batter completes a turn batting and is put out or becomes
+          a runner.
+      - name: home_2b_ct
+        description: The number of doubles hit by the home team.
+      - name: home_3b_ct
+        description: The number of triples hit by the home team.
+      - name: home_hr_ct
+        description: The number of home runs hit by the home team.
+      - name: home_bi_ct
+        description: The number of batters hit by a pitch for the home team.
+      - name: home_hp_ct
+        description: The number of hit batters by the home team's pitchers.
+      - name: home_bb_ct
+        description: The number of walks (bases on balls) allowed to the home team.
+      - name: home_ibb_ct
+        description: The number of intentional walks issued to the home team. An intentional
+          walk is when the defensive team intentionally allows the batter to advance
+          to first base.
+      - name: home_sb_ct
+        description: The number of stolen bases against the home team. A stolen base
+          is when a runner advances one or more bases when the pitcher is in the set
+          position and the ball is live.
+      - name: home_cs_ct
+        description: The number of caught stealings against the home team. A caught
+          stealing is when a runner attempts to steal a base but is thrown out.
+      - name: home_gdp_ct
+        description: The number of ground-ball double plays turned by the home team's
+          defense.
+      - name: home_pitcher_ct
+        description: The number of pitchers used by the home team.
+      - name: home_er_ct
+        description: The number of earned runs allowed by the home team's pitchers.
+          Earned runs are runs that scored as a result of the pitcher's performance,
+          rather than errors or passed balls.
+      - name: home_bk_ct
+        description: The number of balks committed by the home team's pitchers. A
+          balk is an illegal motion made by the pitcher with runners on base.
+      - name: home_po_ct
+        description: The number of putouts recorded by the home team's defense. A
+          putout is when a fielder causes an out by a tag or force out, catching a
+          batted or thrown ball, or catching a third strike.
+      - name: home_a_ct
+        description: The number of times the home team was at bat.
+      - name: home_pb_ct
+        description: The number of passed balls allowed by the home team's catchers.
+          A passed ball is when the catcher fails to hold or control a pitch that
+          should have been caught, allowing runners to advance.
+      - name: home_dp_ct
+        description: The number of double plays turned by the home team's defense.
+      - name: away_manager_id
+        description: The Retrosheet ID of the away team's manager.
+      - name: away_manager_name_tx
+        description: The name of the away team's manager.
+      - name: home_manager_id
+        description: The Retrosheet ID of the home team's manager.
+      - name: home_manager_name_tx
+        description: The name of the home team's manager.
+      - name: goahead_rbi_id
+        description: The Retrosheet ID of the batter who drove in the go-ahead run.
+          The go-ahead run is the run that puts a team ahead in the score for the
+          first time.
+      - name: goahead_rbi_name_tx
+        description: The name of the batter who drove in the go-ahead run.
+      - name: away_lineup1_bat_name_tx
+        description: The name of the first batter in the away team's lineup.
+      - name: away_lineup2_bat_name_tx
+        description: The name of the second batter in the away team's lineup.
+      - name: away_lineup3_bat_name_tx
+        description: The name of the third batter in the away team's lineup.
+      - name: away_lineup4_bat_name_tx
+        description: The name of the fourth batter in the away team's lineup.
+      - name: away_lineup5_bat_name_tx
+        description: The name of the fifth batter in the away team's lineup.
+      - name: away_lineup6_bat_name_tx
+        description: The name of the sixth batter in the away team's lineup.
+      - name: away_lineup7_bat_name_tx
+        description: The name of the seventh batter in the away team's lineup.
+      - name: away_lineup8_bat_name_tx
+        description: The name of the eighth batter in the away team's lineup.
+      - name: away_lineup9_bat_name_tx
+        description: The name of the ninth batter in the away team's lineup.
+      - name: home_lineup1_bat_name_tx
+        description: The name of the first batter in the home team's lineup.
+      - name: home_lineup2_bat_name_tx
+        description: The name of the second batter in the home team's lineup.
+      - name: home_lineup3_bat_name_tx
+        description: The name of the third batter in the home team's lineup.
+      - name: home_lineup4_bat_name_tx
+        description: The name of the fourth batter in the home team's lineup.
+      - name: home_lineup5_bat_name_tx
+        description: The name of the fifth batter in the home team's lineup.
+      - name: home_lineup6_bat_name_tx
+        description: The name of the sixth batter in the home team's lineup.
+      - name: home_lineup7_bat_name_tx
+        description: The name of the seventh batter in the home team's lineup.
+      - name: home_lineup8_bat_name_tx
+        description: The name of the eighth batter in the home team's lineup.
+      - name: home_lineup9_bat_name_tx
+        description: The name of the ninth batter in the home team's lineup.
+      - name: add_info_tx
+        description: Any additional information about the game not captured in other
+          columns.
+      - name: acq_info_tx
+        description: Additional information about how the game data was acquired,
+          such as the source of the data or any data cleaning/processing that was
+          performed.
+  - name: stg_retrosheet__parks
+    description: The dbt model stg_retrosheet__parks is a database that stores information
+      about baseball parks. It includes details like the park's name, location (city
+      and state), the league it belongs to, any known aliases, and the dates it was
+      in use. This model can be used to track the history and usage of baseball parks
+      over time. It can help in understanding patterns such as the lifespan of parks,
+      their geographical distribution, and their association with different leagues.
+      This information can be valuable for sports historians, league organizers, or
+      even city planners.
+    columns:
+      - name: park_id
+        description: A unique 5-character code used to identify each ballpark.
+      - name: name
+        description: The official name of the ballpark.
+      - name: aka
+        description: A common abbreviation or alias for the ballpark's name, if one
+          exists.
+      - name: city
+        description: The city in which the ballpark is located.
+      - name: state
+        description: The state in which the ballpark is located, using the two-letter
+          state abbreviation.
+      - name: start_date
+        description: The date on which the ballpark first opened and began hosting
+          professional baseball games.
+      - name: end_date
+        description: The date on which the ballpark ceased operations, if applicable.
+          If the ballpark is still in use, this will be blank.
+      - name: league
+        description: The league in which the team that plays in the ballpark participates,
+          such as the American League or National League.
+      - name: notes
+        description: Any additional details or context about the ballpark, such as
+          its seating capacity, architectural features, or history.
+      - name: loaded_at
+        description: The date and time at which this ballpark's data was loaded into
+          the database.
+  - name: stg_retrosheet__players
+    description: The stg_retrosheet__players model is a comprehensive database of
+      baseball players. It includes personal details like birthplace and date, physical
+      attributes, and career information such as debut and last game dates in various
+      roles. It also tracks changes in names and batting styles. This model can be
+      used to analyze player performance over time, compare players, or study trends
+      in the sport. For example, it could reveal correlations between physical attributes
+      and career longevity or success. It's a valuable tool for anyone interested
+      in baseball analytics.
+    columns:
+      - name: player_id
+        description: A unique ID number assigned to the player.
+      - name: last_name
+        description: The player's last name.
+      - name: first_name
+        description: The player's first name.
+      - name: nickname
+        description: Any nicknames by which the player was known over their career.
+      - name: birthdate
+        description: The date on which the player was born.
+      - name: birth_city
+        description: The city in which the player was born.
+      - name: birth_state
+        description: The state in which the player was born (for players born in the
+          United States).
+      - name: birth_country
+        description: The country in which the player was born.
+      - name: play_debut
+        description: The date of the player's first Major League game as a player.
+      - name: play_lastgame
+        description: The date of the player's last Major League game as a player.
+      - name: mgr_debut
+        description: The date of the player's first game as a manager in Major League
+          Baseball.
+      - name: mgr_lastgame
+        description: The date of the player's last game as a manager in Major League
+          Baseball.
+      - name: coach_debut
+        description: The date of the player's first game as a coach in Major League
+          Baseball.
+      - name: coach_lastgame
+        description: The date of the player's last game as a coach in Major League
+          Baseball.
+      - name: ump_debut
+        description: The date of the player's first game as an umpire in Major League
+          Baseball.
+      - name: ump_lastgame
+        description: The date of the player's last game as an umpire in Major League
+          Baseball.
+      - name: deathdate
+        description: The date on which the player died.
+      - name: death_city
+        description: The city in which the player died.
+      - name: death_state
+        description: The state in which the player died (for players who died in the
+          United States).
+      - name: death_country
+        description: The country in which the player died.
+      - name: bats
+        description: 'The side of the plate from which the player bats: L (left),
+          R (right), or B (both).'
+      - name: throws
+        description: 'The hand with which the player throws: L (left), R (right),
+          or B (both).'
+      - name: height
+        description: The player's height in feet and inches.
+      - name: weight
+        description: The player's weight in pounds.
+      - name: cemetery
+        description: The name of the cemetery in which the player is buried or interred.
+      - name: ceme_city
+        description: The city in which the player is buried or interred.
+      - name: ceme_state
+        description: The state in which the player is buried or interred (for players
+          interred in the United States).
+      - name: ceme_country
+        description: The country in which the player is buried or interred.
+      - name: ceme_note
+        description: Any additional notes regarding the player's burial or interment
+          location.
+      - name: birth_name
+        description: The full name given to the player at birth.
+      - name: name_chg
+        description: Any legal changes made to the player's name over their lifetime.
+      - name: bat_chg
+        description: Any changes made to the player's batting stance or swing over
+          their career.
+      - name: hof
+        description: A boolean value indicating whether the player was inducted into
+          the Baseball Hall of Fame (true or false).
+      - name: loaded_at
+        description: The timestamp indicating when the data was loaded into the database.
+  - name: stg_retrosheet__subs
+    description: The dbt model stg_retrosheet__subs is a tool that organizes and analyzes
+      data related to baseball game substitutions. It tracks details like the game,
+      inning, and player involved in each substitution. This model can be used to
+      study patterns in substitution strategies, such as which players are often replaced
+      and at what point in the game. It can also help identify correlations between
+      substitutions and game outcomes. This information can be valuable for team managers,
+      sports analysts, and fans.
+    columns:
+      - name: game_id
+        description: The unique ID code for the specific baseball game in which the
+          substitution took place.
+      - name: inn_ct
+        description: The inning number during which the substitution occurred.
+      - name: bat_home_id
+        description: The unique ID number of the batter who was replaced in the lineup.
+      - name: sub_id
+        description: The unique ID code for the substitute player who entered the
+          lineup.
+      - name: sub_home_id
+        description: The unique ID number of the substitute player who entered the
+          lineup.
+      - name: sub_lineup_id
+        description: The ID number of the lineup position that the substitute player
+          filled upon entering the game.
+      - name: sub_fld_cd
+        description: The fielding position code for the substitute player who entered
+          the lineup.
+      - name: removed_id
+        description: The unique ID code for the player who was removed from the lineup.
+      - name: removed_fld_cd
+        description: The fielding position code for the player who was removed from
+          the lineup.
+      - name: event_id
+        description: The ID number of the event (at-bat) during which the substitution
+          occurred.
+      - name: loaded_at
+        description: The date and time when the substitution data was loaded into
+          the database.
